@@ -9,22 +9,24 @@ const ListLink = props =>
     </StyledLink>
   </Li>
 
+const windowGlobal = typeof window !== 'undefined' && window
+
 class Navigation extends Component {
   state = {
     menuVisible: false,
-    width: window.innerWidth,
+    width: windowGlobal.innerWidth,
   };
 
-  componentWillMount() {
-    window.addEventListener('resize', this.handleWindowSizeChange);
+  componentDidMount() {
+    windowGlobal.addEventListener('resize', this.handleWindowSizeChange);
   }
 
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.handleWindowSizeChange);
-  }
+  // componentWillUnmount() {
+  //   window.removeEventListener('resize', this.handleWindowSizeChange);
+  // }
 
   handleWindowSizeChange = () => {
-    this.setState({ width: window.innerWidth });
+    this.setState({ width: windowGlobal.innerWidth });
   };
 
   toggleMenu = () => {
