@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import styled from "styled-components";
-import researchgate from "../images/social-researchgate.png";
+import researchgate from "../pages/images/social-researchgate.png";
 import email from "../pages/images/social-email.png";
 import is from "../pages/images/social-is.png";
 

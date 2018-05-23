@@ -2,11 +2,11 @@ import React, {Component} from "react";
 import styled from "styled-components";
 
 import StaffBox from "../components/staffBox"
-import helesic from "../images/helesic.jpg";
-import omesova from "../images/omesova.jpg";
-import sychra from "../images/sychra.jpg";
-import zahradkova from "../images/zahradkova.jpg";
-import paril from "../images/paril.jpg";
+import helesic from "./images/helesic.jpg";
+import omesova from "./images/omesova.jpg";
+import sychra from "./images/sychra.jpg";
+import zahradkova from "./images/zahradkova.jpg";
+import paril from "./images/paril.jpg";
 
 const helesicInfo = {
     name: "Jan Helešic",

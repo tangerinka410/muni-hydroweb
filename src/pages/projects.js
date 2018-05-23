@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import styled from "styled-components";
 
-import img2 from "../images/img2.jpg";
+import img2 from "./images/img2.jpg";
 import Project from "../components/project"
 
 const project1 = {
