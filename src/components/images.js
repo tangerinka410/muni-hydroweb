@@ -1,9 +1,9 @@
 import React, {Component} from "react";
 import styled from "styled-components";
-import hp01 from "../images/homepage/hp01.jpg";
-import hp02 from "../images/homepage/hp02.jpg";
-import hp03 from "../images/homepage/hp03.jpg";
-import hp04 from "../images/homepage/hp04.jpg";
+import hp01 from "../pages/images/homepage/hp01.jpg";
+import hp02 from "../pages/images/homepage/hp02.jpg";
+import hp03 from "../pages/images/homepage/hp03.jpg";
+import hp04 from "../pages/images/homepage/hp04.jpg";
 
 const imgs = [hp01, hp02, hp03, hp04] //do props
 

@@ -3,7 +3,7 @@ import Link from "gatsby-link";
 import styled from "styled-components";
 import {ThemeProvider} from 'styled-components';
 
-import ecdyonurus from "../images/ecdyonurus.jpg";
+import ecdyonurus from "../pages/images/ecdyonurus.jpg";
 import Navigation from "./navigation";
 import FooterContent from "./footer";
 
