@@ -72,13 +72,19 @@ const Container = styled.ul`
 const Li = styled.li`
     display: ${props => props.menuVisible ? 'flex' : 'none'};
     height: 40px;
-    flex: 1;
+    flex: auto;
     align-items: center;
     justify-content: center;
     background: color: ${props => props.theme.secondary};
     color: ${props => props.theme.white};
     padding: 0px 10px;
     border-right: 1px solid black;
+    &:last-child {
+      border-right: 0px;
+    }
+    @media (max-width: 800px) {
+      border: 0px;
+    }
 `;
 
 const StyledLink = styled(Link)`

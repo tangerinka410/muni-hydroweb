@@ -21,7 +21,7 @@ export default ({ children }) =>
  <ThemeProvider theme={blueTheme}>
     <Container class="container">
     <LogoText><img src={ecdyonurus}/>
-    Laboratoř biologie tekoucích vod
+    Pracovní skupina hydrobiologie
     </LogoText>
     <SubHeader>Ústav botaniky a zoologie | Masarykova univerzita | Přírodovědecká fakulta </SubHeader>
 
