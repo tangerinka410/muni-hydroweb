@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from 'prop-types';
 import styled from "styled-components";
-
+import Layout from "../components/layout"
 
 const courses = [
    {name: "Hydrobiologie (Bi0000)", lecteur: "Jan Helešic", link: "http://is.muni.cz"},
@@ -14,10 +14,10 @@ const Courses = props => {
         return <li key={i.name}><A href={i.link}>{i.name}</A>. Vyučující: <i><strong>{i.lecteur}</strong></i></li>;
     })
     return (
-    <Container>
+    <Layout><Container>
         <h1> Předměty </h1>
     {coursesList}
-    </Container>
+    </Container></Layout>
     );
 };
 

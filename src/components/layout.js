@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "gatsby-link";
+import {Link} from "gatsby";
 import styled from "styled-components";
 import {ThemeProvider} from 'styled-components';
 
@@ -24,10 +24,8 @@ export default ({ children }) =>
     Pracovní skupina hydrobiologie
     </LogoText>
     <SubHeader>Ústav botaniky a zoologie | Masarykova univerzita | Přírodovědecká fakulta </SubHeader>
-
-
     <Header><Navigation/></Header>
-    <Main>{children()}</Main>
+    <Main>{children}</Main>
     <footer><FooterContent/></footer>
     </Container>
   </ThemeProvider>
@@ -36,6 +34,7 @@ const Container = styled.div`
     min-height: 100%;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 `;
 
 

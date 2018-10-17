@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import styled from "styled-components";
-import Link from "gatsby-link"
+import {Link} from "gatsby";
+import StyledLink from "./atoms/styledLink"
 
 const ListLink = props =>
   <Li menuVisible={props.menuVisible}>
-    <StyledLink to={props.to}>
+    <StyledLink to={props.to} color='white' underline>
       {props.children}
     </StyledLink>
   </Li>
@@ -20,10 +21,6 @@ class Navigation extends Component {
   componentDidMount() {
     windowGlobal.addEventListener('resize', this.handleWindowSizeChange);
   }
-
-  // componentWillUnmount() {
-  //   window.removeEventListener('resize', this.handleWindowSizeChange);
-  // }
 
   handleWindowSizeChange = () => {
     this.setState({ width: windowGlobal.innerWidth });
@@ -45,7 +42,6 @@ class Navigation extends Component {
             <ListLink to="/history/" menuVisible={menuVisible}>Historie</ListLink>
             <ListLink to="/staff/" menuVisible={menuVisible}>Zaměstnatnci</ListLink>
             <ListLink to="/students/" menuVisible={menuVisible}>Studenti</ListLink>
-            <Li menuVisible={menuVisible}>Absolventi</Li>
             <ListLink to="/projects/" menuVisible={menuVisible}>Projekty</ListLink>
             <ListLink to="/publications/" menuVisible={menuVisible}>Publikace</ListLink>
             <ListLink to="/courses/"  menuVisible={menuVisible}>Předměty</ListLink>
@@ -85,14 +81,6 @@ const Li = styled.li`
     @media (max-width: 800px) {
       border: 0px;
     }
-`;
-
-const StyledLink = styled(Link)`
-  color: ${props => props.theme.white};
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
-  }
 `;
 
 const NavbarToggle  = styled(Li)`

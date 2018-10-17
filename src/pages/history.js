@@ -1,13 +1,14 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import styled from "styled-components";
+import Layout from "../components/layout"
 
-const History = props => {
-    return (
+const History = () => {
+    return (<Layout>
     <Container>
       <h1>Historie</h1>
             <p>Tady bude něco o historii</p>
-    </Container>
+    </Container></Layout>
     );
 };
 

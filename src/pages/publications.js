@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from 'prop-types';
 import styled from "styled-components";
-
+import Layout from "../components/layout"
 
 const papers_2017 = [
     "Beran L., Juřičková L. & Horsák M. (2017): Mollusca (měkkýši). In: Hejda R., Farkač J. & Chobot K. (eds.). Červený seznam ohrožených druhů České republiky. Bezobratlí. (Red List of threatened species of the Czech Republic. Invertebrates.). Příroda 36: 70-76.",
@@ -18,7 +18,7 @@ const Publications = props => {
     const papers2017 = papers_2017.map(i => {
             return <li key={i}>{i}</li>;
           })
-    return (
+    return (<Layout>
     <Container>
     <h2>2017</h2>
     <ul>
@@ -28,7 +28,7 @@ const Publications = props => {
     <ul>
     {papers2017}
     </ul>
-    </Container>
+    </Container></Layout>
     );
 };
 

@@ -4,23 +4,35 @@ import facebook from "../pages/images/facebook.png";
 import youtube from "../pages/images/youtube.png";
 import twitter from "../pages/images/twitter.png";
 
+const footer = {
+    botzool: 'Ústav botaniky a zoologie, ',
+    faculty: 'Přírodovědecké fakulty, ',
+    university: ' Masarykovy Univerzity',
+    postalAddressHeading: 'Poštovní adresa: ',
+    physicalAddressHeading: 'Adresa pracoviště: ',
+    postalAddress: 'Kotlářská 267/2, 611 37, Brno, Czech Republic',
+    physicalAddress: 'Campus Bohunice, budova A31, Kamenice 5, Brno',
+    links: 'Odkazy'
+}
 const FooterContent = () => {
     return (
         <Container>
-           <FooterSection background='rgba(150,150,150, 0.7)'>
+           <FooterSection background='rgba(150,150,150, 0.9)'>
                 <FooterHeader>MUNI</FooterHeader>
-                <A href="http://botzool.sci.muni.cz">Ústav botaniky a zoologie</A> <br/>
-                 je součástí <A href="http://www.sci.muni.cz/">Přírodovědecké fakulty</A>  <br/>
-                <A href="https://www.muni.cz/">Masarykovy univerzity</A>
+                <A href="http://botzool.sci.muni.cz">{footer.botzool}</A>
+                je součástí  <A href="http://www.sci.muni.cz/">{footer.faculty}</A>
+                <A href="https://www.muni.cz/">{footer.university}</A>
+            </FooterSection>
+           <FooterSection background='rgba(150,150,150, 0.8)'>
+               <FooterHeader>{footer.postalAddressHeading}</FooterHeader>
+               {footer.postalAddress}
+            </FooterSection>
+           <FooterSection background='rgba(150,150,150, 0.7)'>
+               <FooterHeader>{footer.physicalAddressHeading}</FooterHeader>
+               {footer.physicalAddress}
             </FooterSection>
            <FooterSection background='rgba(150,150,150, 0.6)'>
-               <FooterHeader>ADRESA</FooterHeader>
-                Kotlářská 267/2,<br/>
-                611 37, Brno,<br/>
-                Czech Republic
-            </FooterSection>
-           <FooterSection background='rgba(150,150,150, 0.5)'>
-               <FooterHeader>ODKAZY</FooterHeader>
+               <FooterHeader>{footer.links}</FooterHeader>
                 <a href="https://www.facebook.com/botzool"><Img src={facebook} /></a>
                 <a href="https://www.youtube.com/channel/UCpUU624DlUwOewM_KfG1rpA/videos"><Img src={youtube} /></a>
                 <a href="https://twitter.com/BotZool_MUNI"><Img src={twitter} /></a>
@@ -33,14 +45,8 @@ export default FooterContent;
 
 const Container = styled.div`
     display: flex;
-    align-items: center;
-    justify-items: center;
     flex-wrap: wrap;
-    margin: 0 auto;
-    font-size:0.9em;
-    @media (max-width: 800px) {
-      font-size:0.9em;
-    }
+    margin: 1em auto 0;
 `;
 
 const FooterSection = styled.div`
@@ -49,9 +55,9 @@ const FooterSection = styled.div`
     background-color: ${props => props.background};
     padding: 1em;
     text-align: center;
-    height: 100px;
+    line-height: 1.2;
     min-width: 255px;
-    align-self: center;
+    font-size: 16px;
 `;
 
 const A = styled.a`

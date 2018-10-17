@@ -9,15 +9,6 @@ const imgs = [hp01, hp02, hp03, hp04] //do props
 
 class Images extends Component {
     state = {imgIndex: 0}
-    componentDidMount() {
-         setTimeout(()=> this.pictureChanger(), 3000)
-         console.log('did mount', this.state )
-    }
-
-    componentDidUpdate() {
-         setTimeout(()=> this.pictureChanger(), 3000)
-         console.log('did update ', this.state )
-    }
 
     pictureChanger = () => {
         if (this.state.imgIndex<imgs.length-1) {
@@ -25,6 +16,15 @@ class Images extends Component {
         } else {
             this.setState({imgIndex: 0})
         }
+    }
+    componentDidMount() {
+        this.interval = setInterval(() => {
+            this.pictureChanger()
+        }, 3000);
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.interval);
     }
 
     render() {

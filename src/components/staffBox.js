@@ -1,34 +1,54 @@
 import React, {Component} from "react";
 import styled from "styled-components";
+import {Link} from "gatsby"
+import StyledLink from "./atoms/styledLink"
 import researchgate from "../pages/images/social-researchgate.png";
 import email from "../pages/images/social-email.png";
 import is from "../pages/images/social-is.png";
 
+
 class StaffBox extends Component {
     render() {
-      const {img, personInfo} = this.props
-      const research = personInfo.research.map(i => {
-            return <li key={i}>{i}</li>;
-          })
+      const {personInfo, isStudent} = this.props
+      const linkTo = isStudent ? `/students/${personInfo.id}/`: `/staff/${personInfo.id}/`
         return (
         <Box>
-            <BoxPart style={{flex: 1}}>
-                <BoxSubPart><img src={img} alt={personInfo.name}/></BoxSubPart>
-                <BoxSubPart style={{paddingTop: '1em'}}>
-                    <a href={`mailto:${personInfo.email}` || '#'}><img src={email}/></a>
-                    <a href={personInfo.researchgate || '#'}><img src={researchgate}/></a>
-                    <a href={personInfo.is || '#'}><img src={is}/></a>
-                </BoxSubPart>
+            <BoxPart style={{flex: 1, minWidth: 265, textAlign: 'center'}}>
+                <Link to={linkTo}>
+                    {personInfo.img && <img src={personInfo.img} alt={personInfo.name} height='265px'/>}
+                </Link>
             </BoxPart>
-            <BoxPart style={{flex: 5}}>
-                <Name>{personInfo.name}
-                <div style={{fontSize: '0.8em', color: '#778899'}}>{personInfo.position}</div>
-                </Name>
+            <BoxPart style={{flex: 6, minWidth: 260}}>
+                <StyledLink to={linkTo}>
+                    <Name>{personInfo.name}
+                    {!isStudent && <div style={{fontSize: '0.7em', color: '#778899'}}>{personInfo.position}</div>}
+                    </Name>
+                </StyledLink>
                 <div>
-                    {research}
+                    {isStudent && <P>
+                        <div><u>Práce:</u> {personInfo.thesis}</div>
+                        <div><u>Školitel:</u> {personInfo.supervisor}</div>
+                    </P>}
+                    <P>
+                        <i className="fa fa-envelope fa-lg" style={{color: 'black', marginRight: 15}}></i>
+                        <a href={`mailto:${personInfo.email}` || '#'}>
+                            <span>{personInfo.email}</span>
+                        </a>
+                    </P>
+                    <P>
+                        <i className="fa fa-phone fa-lg" style={{marginRight: 15}}></i>
+                        {personInfo.phoneNumber}
+                    </P>
+                    <P>
+                        <i className="fa fa-map-marker" style={{marginRight: 25}}></i>
+                        {personInfo.address}
+                    </P>
+                    <P>
+                        <a href={personInfo.researchgate || '#'}><img src={researchgate} alt='researchgate'  height='40px'/></a>
+                        <a href={personInfo.is || '#'}><img src={is} alt='is' height='40px'/></a>
+                    </P>
                 </div>
             </BoxPart>
-
         </Box>
 );
 }}
@@ -38,30 +58,33 @@ const Box = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  min-width: 18em;
-  min-height: 18em;
   padding: 1em;
-  border-bottom: 0.1em solid #46ACC2;
-  line-height: 1.6em;
-  @media (max-width: 800px) {
-    flex-direction: column;
+  @media (max-width: ${props => props.theme.largeDevice}) {
+    padding: 0;
   }
 `;
 
 const Name = styled.h3`
     color: ${props => props.theme.main};
     text-transform: uppercase;
-    margin-top: 0;
+    margin: 0;
+    margin-bottom: 20px;
     border-bottom: 0.08em solid rgb(229, 229, 229);
  `
 
 const BoxPart = styled.div`
-    padding: 1em;
+    padding: 0 1em;
  `
 
- const BoxSubPart = styled.div`
-    display: flex;
-    flex: 1;
-    justify-content: center;
-    align-items: center;
+const P = styled.p`
+    margin: 10px 0px;
  `
+
+//  const StyledLink = styled.a`
+//   color: ${props => props.theme.grey};
+//   text-decoration: none;
+//   cursor: pointer;
+//   &:hover {
+//     text-decoration: ${props => props.underline ? 'underline' : 'none'};
+//   }
+// `;

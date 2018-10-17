@@ -2,10 +2,11 @@ import React from "react"
 import styled from "styled-components";
 import { injectGlobal } from 'styled-components'
 import Images from "../components/images";
+import Layout from "../components/layout"
 
 import 'font-awesome/css/font-awesome.min.css';
 
-export default () => <Container>
+export default () => <Layout><Container>
       <Images style={{height: '450px'}}/>
   <h1>Změny diverzity a druhových vlastností vodních organizmů: individuální tolerance, dlouhodobé trendy a prostorová variabilita</h1>
   <div>
@@ -30,24 +31,7 @@ tak experimentech v přírodních i laboratorních podmínkách, včetně zapoje
 Náš výzkum je primárně základní, avšak tradičně se naše skupina snaží o využití výsledků k predikcím, vyhodnocení rizik a v oblasti ochrany přírody a managementu.
     </p>
     </div>
-</Container>
-
-injectGlobal`
-html, body, #___gatsby, #___gatsby>div {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    font-family: "Proxima Nova Regular","Helvetica Neue",Arial,Helvetica,sans-serif;
-    color: #333;
-}
-p, li {
-  font-size: 1.1em;
-  line-height: 1.6em;
-}
-* {
-    box-sizing: border-box
-}
-`
+</Container></Layout>
 
  const Container = styled.div`
     width: 90%;
@@ -56,3 +40,52 @@ p, li {
       width: 100%;
     }
 `;
+
+
+injectGlobal`
+html, body, #___gatsby, #___gatsby>div {
+    width: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: Elena, sans-serif;
+    font-size: calc(17px + .25vw);
+    letter-spacing: -.25px;
+    line-height: calc(1.5em + .2vw);
+    color: #333;
+}
+
+
+body h1, body h2 {
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: calc(22px + 1.6vw);
+}
+
+h2 {
+  font-size: calc(24px + .25vw);
+  font-weight: bold;
+}
+
+h2 + ul {
+  list-style-type:none;
+  padding: 0;
+  line-height: 1.2em;
+}
+
+h2 + ul > li {
+  margin-bottom: 1em;
+}
+
+a {
+  color: green;
+}
+
+
+* {
+    box-sizing: border-box
+}
+`
