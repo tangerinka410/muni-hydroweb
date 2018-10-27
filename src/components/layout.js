@@ -6,7 +6,7 @@ import {ThemeProvider} from 'styled-components';
 import ecdyonurus from "../pages/images/ecdyonurus.jpg";
 import Navigation from "./navigation";
 import FooterContent from "./footer";
-
+import "./layout.css"
 
 const blueTheme = {
   main: '#0868ac',

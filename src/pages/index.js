@@ -1,8 +1,8 @@
 import React from "react"
 import styled from "styled-components";
-import { injectGlobal } from 'styled-components'
 import Images from "../components/images";
 import Layout from "../components/layout"
+
 
 import 'font-awesome/css/font-awesome.min.css';
 
@@ -40,52 +40,3 @@ Náš výzkum je primárně základní, avšak tradičně se naše skupina snaž
       width: 100%;
     }
 `;
-
-
-injectGlobal`
-html, body, #___gatsby, #___gatsby>div {
-    width: 100%;
-    margin: 0;
-}
-
-body {
-    font-family: Elena, sans-serif;
-    font-size: calc(17px + .25vw);
-    letter-spacing: -.25px;
-    line-height: calc(1.5em + .2vw);
-    color: #333;
-}
-
-
-body h1, body h2 {
-  line-height: 1.2;
-}
-
-h1 {
-  font-size: calc(22px + 1.6vw);
-}
-
-h2 {
-  font-size: calc(24px + .25vw);
-  font-weight: bold;
-}
-
-h2 + ul {
-  list-style-type:none;
-  padding: 0;
-  line-height: 1.2em;
-}
-
-h2 + ul > li {
-  margin-bottom: 1em;
-}
-
-a {
-  color: green;
-}
-
-
-* {
-    box-sizing: border-box
-}
-`
