@@ -4,15 +4,14 @@ import {Link} from "gatsby"
 class Project extends Component {
     render() {
       const {project} = this.props
-      const linkTo =`/projects/${project.id}/`
         return (
-          <Link to={linkTo}>
+          <StyledLink to={`/${project.id}/`}>
           <Box>
             <Img src={project.img} alt={project.name}/>
             <Name>{project.name}</Name>
             <div style={{fontSize: '0.8em', color: '#778899'}}>{project.mainSolver}</div>
         </Box>
-        </Link>
+        </StyledLink>
 );
 }}
 export default Project;
@@ -36,5 +35,9 @@ const Name = styled.h3`
  `
 
   const Img = styled.img`
-    max-width: 500px;
+    max-width: 600px;
  `
+//todo: similar with staff
+const StyledLink = styled(Link)`
+  text-decoration: none;
+`;

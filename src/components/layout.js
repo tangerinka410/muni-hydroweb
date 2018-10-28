@@ -19,7 +19,7 @@ const blueTheme = {
 
 export default ({ children }) =>
  <ThemeProvider theme={blueTheme}>
-    <Container class="container">
+    <Container className="container">
     <LogoText><img src={ecdyonurus}/>
     Pracovní skupina hydrobiologie
     </LogoText>

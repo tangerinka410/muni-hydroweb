@@ -14,7 +14,7 @@ const papers_2017 = [
     "Schenková J. & Sychra J (2017): Hirudinea (pijavice). In: Hejda R., Farkač J. & Chobot K. (eds.). Červený seznam ohrožených druhů České republiky. Bezobratlí. (Red List of threatened species of the Czech Republic. Invertebrates.). Příroda 36: 62-67."
 ]
 
-const Publications = props => {
+const Publications = () => {
     const papers2017 = papers_2017.map(i => {
             return <li key={i}>{i}</li>;
           })

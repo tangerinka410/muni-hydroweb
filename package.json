@@ -9,6 +9,7 @@
     "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
+    "@types/styled-components": "^4.0.3",
     "babel-plugin-styled-components": "^1.5.1",
     "font-awesome": "^4.7.0",
     "gatsby": "next",

@@ -2,9 +2,9 @@ import React from "react"
 import {Link} from "gatsby"
 import styled from "styled-components";
 
-const StyledLink = ({to, children, color, hoverColor, focusColor, underline}) => {
+const StyledLink = ({to, children, color, hoverColor, focuscolor, underline}) => {
     return (
-      <LinkStyled to={to} color={color} focusColor={focusColor} underline={underline}> {children} </LinkStyled>
+      <LinkStyled to={to} color={color} focuscolor={focuscolor} underline={underline}> {children} </LinkStyled>
 
     );
 };
@@ -20,7 +20,7 @@ const LinkStyled = styled(Link)`
     color: ${props => props.hoverColor ||  ''};
   }
   &:focus {
-    color: ${props => props.focusColor ||  '' };
+    color: ${props => props.focuscolor ||  '' };
   }
 `;
 

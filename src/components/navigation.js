@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import styled from "styled-components";
 import {Link} from "gatsby";
-import StyledLink from "./atoms/styledLink"
+import StyledLink from "./atoms/StyledLink"
 
 const ListLink = props =>
   <Li menuVisible={props.menuVisible}>
-    <StyledLink to={props.to} color='white' underline>
+    <StyledLink to={props.to} color='white' underline="underline">
       {props.children}
     </StyledLink>
   </Li>

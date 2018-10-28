@@ -1,16 +1,15 @@
 import React, {Component} from "react";
 import styled from "styled-components";
 import {Link} from "gatsby"
-import StyledLink from "./atoms/styledLink"
+import StyledLink from "./atoms/StyledLink"
 import researchgate from "../pages/images/social-researchgate.png";
-import email from "../pages/images/social-email.png";
 import is from "../pages/images/social-is.png";
 
 
 class StaffBox extends Component {
     render() {
       const {personInfo, isStudent} = this.props
-      const linkTo = isStudent ? `/students/${personInfo.id}/`: `/staff/${personInfo.id}/`
+      const linkTo = isStudent ? `${personInfo.id}/`: `/${personInfo.id}/`
         return (
         <Box>
             <BoxPart style={{flex: 1, minWidth: 265, textAlign: 'center'}}>
