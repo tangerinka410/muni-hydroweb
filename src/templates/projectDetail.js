@@ -20,12 +20,12 @@ export default ({ pageContext: { project } }) => (
       <NarrowContainer>
         <H2>{project.name}</H2>
         <div>{project.nameEng}</div>
-        <Section header="Financováno: ">{project.finance}</Section>
-        <Section header="Doba trvání: ">{project.period}</Section>
-        <Section header="Řešitelský tým: ">{project.solvers}</Section>
-        <Section header="Spolupracovníci: ">{project.cooperators}</Section>
-        <Section header="Anotace: ">{project.anotation}</Section>
-        <Section header="Cíl projektu: ">{project.goals}</Section>
+        {project.finance && <Section header="Financováno: ">{project.finance}</Section>}
+        {project.period && <Section header="Doba trvání: ">{project.period}</Section>}
+        {project.solvers && <Section header="Řešitelský tým: ">{project.solvers}</Section>}
+        {project.cooperators && <Section header="Spolupracovníci: ">{project.cooperators}</Section>}
+        {project.anotation && <Section header="Anotace: ">{project.anotation}</Section>}
+        {project.goals && <Section header="Cíl projektu: ">{project.goals}</Section>}
         <Img src={project.img} />
         <StyledLink to="/projects/">
           <i className="fa fa-arrow-left" />
