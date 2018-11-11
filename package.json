@@ -13,7 +13,11 @@
     "babel-plugin-styled-components": "^1.5.1",
     "font-awesome": "^4.7.0",
     "gatsby": "next",
+    "gatsby-plugin-sharp": "^2.0.12",
     "gatsby-plugin-styled-components": "next",
+    "gatsby-source-filesystem": "^2.0.8",
+    "gatsby-transformer-remark": "^2.1.12",
+    "gatsby-transformer-sharp": "^2.1.8",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "styled-components": "^4.0.2"
