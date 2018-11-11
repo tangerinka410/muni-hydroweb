@@ -12,15 +12,15 @@
     "@types/styled-components": "^4.0.3",
     "babel-plugin-styled-components": "^1.5.1",
     "font-awesome": "^4.7.0",
-    "gatsby": "^2.0.0-rc.28",
+    "gatsby": "^2.0.45",
     "gatsby-plugin-sharp": "^2.0.12",
-    "gatsby-plugin-styled-components": "^3.0.0-rc.5",
+    "gatsby-plugin-styled-components": "^3.0.1",
     "gatsby-source-filesystem": "^2.0.8",
     "gatsby-transformer-remark": "^2.1.12",
     "gatsby-transformer-sharp": "^2.1.8",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "styled-components": "^4.0.2"
+    "react": "^16.6.1",
+    "react-dom": "^16.6.1",
+    "styled-components": "^4.0.3"
   },
   "devDependencies": {
     "gh-pages": "^1.1.0"
