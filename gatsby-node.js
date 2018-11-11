@@ -1,7 +1,7 @@
-const projectsData = require('./src/content/projectsData');
-const staffData = require('./src/content/staffData');
-const phdStudentsData = require('./src/content/phdStudentsData');
-const studentsData = require('./src/content/studentsData');
+const projectsData = require('./content/projectsData');
+const staffData = require('./content/staffData');
+const phdStudentsData = require('./content/phdStudentsData');
+const studentsData = require('./content/studentsData');
 
 exports.createPages = async ({ actions: { createPage } }) => {
 
