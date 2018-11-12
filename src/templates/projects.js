@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Project from '../components/Project'
+import Project from '../components/project'
 import Layout from '../components/layout'
 
 export default ({ pageContext: { projectsData } }) => (

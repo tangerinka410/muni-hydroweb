@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Layout from '../components/layout'
-import StaffBox from '../components/StaffBox'
+import StaffBox from '../components/staffBox'
 
 export default ({ pageContext: { staffData } }) => (
     <Layout>

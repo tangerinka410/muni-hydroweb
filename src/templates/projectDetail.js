@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Link } from "gatsby";
 
 import Layout from "../components/layout";
-import H2 from "../components/atoms/h2";
+import H2 from "../components/atoms/H2";
 
 
 const Section = ({ header, children }) => (

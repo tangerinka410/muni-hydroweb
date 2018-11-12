@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Layout from '../components/layout'
-import StaffBox from '../components/StaffBox'
-import StudentsSection from '../components/StudentsSection'
+import StaffBox from '../components/staffBox'
+import StudentsSection from '../components/studentsSection'
 import H2 from "../components/atoms/H2";
 
 export default ({ pageContext: { phdStudentsData, studentsData } }) => (

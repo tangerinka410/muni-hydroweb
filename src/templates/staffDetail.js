@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Layout from "../components/layout";
-import StaffBox from "../components/StaffBox";
+import StaffBox from "../components/staffBox";
 import H2 from "../components/atoms/H2";
 import StyledLink from "../components/atoms/StyledLink";
 
