@@ -8,7 +8,7 @@ const StudentsSection = ({ students, type }) => (
     <Section>
       <H2>{type}</H2>
       <div><ul>{students.map(i => <li><Link key={i.name} href={i.link}>{i.name}</Link></li>)}</ul></div>
-      </Section>
+    </Section>
   )
 
 export default StudentsSection;

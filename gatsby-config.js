@@ -22,6 +22,6 @@ module.exports = {
   `gatsby-plugin-sharp`,
   `gatsby-transformer-remark`,
   ],
-    pathPrefix: "/hydroweb"
+    pathPrefix: "/muni-hydroweb"
 
 }
