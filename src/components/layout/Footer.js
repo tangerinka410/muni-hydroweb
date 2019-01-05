@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import styled from "styled-components";
-import facebook from "../pages/images/facebook.png";
-import youtube from "../pages/images/youtube.png";
-import twitter from "../pages/images/twitter.png";
+import facebook from "../../pages/images/facebook.png";
+import youtube from "../../pages/images/youtube.png";
+import twitter from "../../pages/images/twitter.png";
 
 const footer = {
     botzool: 'Ústav botaniky a zoologie, ',

@@ -24,28 +24,28 @@ class StaffBox extends Component {
                     </Name>
                 </StyledLink>
                 <div>
-                    {isStudent && <P>
+                    {isStudent && <Div>
                         <div><u>Práce:</u> {personInfo.thesis}</div>
                         <div><u>Školitel:</u> {personInfo.supervisor}</div>
-                    </P>}
-                    <P>
+                    </Div>}
+                    <Div>
                         <i className="fa fa-envelope fa-lg" style={{color: 'black', marginRight: 15}}></i>
                         <a href={`mailto:${personInfo.email}` || '#'}>
                             <span>{personInfo.email}</span>
                         </a>
-                    </P>
-                    <P>
+                    </Div>
+                    <Div>
                         <i className="fa fa-phone fa-lg" style={{marginRight: 15}}></i>
                         {personInfo.phoneNumber}
-                    </P>
-                    <P>
+                    </Div>
+                    <Div>
                         <i className="fa fa-map-marker" style={{marginRight: 25}}></i>
                         {personInfo.address}
-                    </P>
-                    <P>
+                    </Div>
+                    <Div>
                         <a href={personInfo.researchgate || '#'}><img src={researchgate} alt='researchgate'  height='40px'/></a>
                         <a href={personInfo.is || '#'}><img src={is} alt='is' height='40px'/></a>
-                    </P>
+                    </Div>
                 </div>
             </BoxPart>
         </Box>
@@ -75,7 +75,7 @@ const BoxPart = styled.div`
     padding: 0 1em;
  `
 
-const P = styled.p`
+const Div = styled.div`
     margin: 10px 0px;
  `
 

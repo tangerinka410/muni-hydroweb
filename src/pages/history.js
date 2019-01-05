@@ -11,7 +11,6 @@ import M_Losos from "../../static/images/history/M_Losos.jpg"
 const History = () => {
     return (<Layout>
     <Container>
-      <h1>Historie</h1>
             <HistoryBox history={history.hrabe} img={S_Hrabe}/>
             <HistoryBox history={history.zelinka}  img={B_Zelinka} reverse/>
             <HistoryBox history={history.losos}  img={M_Losos}/>
@@ -31,6 +30,7 @@ export default History;
 const Container = styled.div`
     width: 90%;
     margin: 0 auto;
+    padding-top: 50px;
     @media (max-width: 800px) {
       width: 100%;
     }

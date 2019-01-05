@@ -1,6 +1,8 @@
+const path = require(`path`)
+
 module.exports = {
   siteMetadata: {
-    title: `Hydrobiologie - MUNI`,
+    title: `Hydrobiologie - MUNI`
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -8,20 +10,26 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content`,
-        name: "content",
-      },
+        name: "content"
+      }
     },
     {
-    resolve: `gatsby-source-filesystem`,
-    options: {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         path: `${__dirname}/static/images/`,
+        name: `images`
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `images`,
-    }
-  },
-  `gatsby-transformer-sharp`,
-  `gatsby-plugin-sharp`,
-  `gatsby-transformer-remark`,
+        path: path.join(__dirname, `static`, `images`)
+      }
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`
+    //`gatsby-transformer-remark`,
   ],
-    pathPrefix: "/muni-hydroweb"
-
-}
+  pathPrefix: "/muni-hydroweb"
+};

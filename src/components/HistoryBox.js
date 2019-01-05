@@ -28,6 +28,10 @@ const History = styled.div`
   display: flex;
   margin-bottom: 30px;
   flex-direction: ${props => props.reverse ? "row-reverse"  : 'row' };
+  @media (max-width: 800px) {
+    flex-direction: column;
+    padding: 0 20px;
+  }
 `;
 
 const Name = styled.h2`
