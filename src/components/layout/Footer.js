@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from "styled-components";
 import facebook from "../../pages/images/facebook.png";
 import youtube from "../../pages/images/youtube.png";

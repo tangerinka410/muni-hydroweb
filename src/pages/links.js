@@ -1,5 +1,4 @@
 import React from "react"
-import PropTypes from 'prop-types';
 import styled from "styled-components";
 import Layout from "../components/layout"
 
@@ -7,7 +6,7 @@ const links = [
    {name: "Česká limnologická společnost", link: "http://www.limnospol.cz"},
 ]
 
-const Links = props => {
+const Links = () => {
     const linksList = links.map(i => {
         return <li key={i.name}><A href={i.link}>{i.name}</A></li>;
     })

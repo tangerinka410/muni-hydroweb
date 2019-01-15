@@ -1,5 +1,4 @@
 import React from "react"
-import PropTypes from 'prop-types';
 import styled from "styled-components";
 import Layout from "../components/layout"
 
@@ -9,7 +8,7 @@ const courses = [
    {name: "Hydrobiologie (Bi0002)", lecteur: "Jan Helešic", link: "http://is.muni.cz"}
 ]
 
-const Courses = props => {
+const Courses = () => {
     const coursesList = courses.map(i => {
         return <li key={i.name}><A href={i.link}>{i.name}</A>. Vyučující: <i><strong>{i.lecteur}</strong></i></li>;
     })

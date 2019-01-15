@@ -1,13 +1,14 @@
 import React from "react";
-import PropTypes from 'prop-types';
 import styled from "styled-components";
 import Layout from "../components/layout"
 import HistoryBox from "../components/HistoryBox"
 import {history} from "../../content/history"
+
 import B_Zelinka from "../../static/images/history/B_Zelinka.jpg"
 import F_Kubicek from "../../static/images/history/F_Kubicek.jpg"
 import S_Hrabe from "../../static/images/history/S_Hrabe.jpg"
 import M_Losos from "../../static/images/history/M_Losos.jpg"
+
 const History = () => {
     return (<Layout>
     <Container>

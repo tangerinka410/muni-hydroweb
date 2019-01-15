@@ -6,7 +6,7 @@ const HeaderComponent = ({ className }) => {
   return (
     <Header className={className}>
       <ImgCont>
-        <img src={ecdyonurus} />
+        <img src={ecdyonurus} alt="logo"/>
       </ImgCont>
       <Muni>
         <Link to="/" style={{textDecoration: "none"}}><Main>Pracovní skupina hydrobiologie</Main></Link>

@@ -21,14 +21,16 @@ class Navigation extends PureComponent {
   };
 
   componentDidMount() {
+    console.log("mount")
     this.prev = window.scrollY;
     windowGlobal.addEventListener("resize", this.handleWindowSizeChange);
     windowGlobal.addEventListener("scroll", this.handleScroll);
   }
 
   componentWillUnmount() {
+    console.log("unmount")
     window.removeEventListener("resize", this.handleWindowSizeChange);
-    window.removeEventListener("scroll", this.onScroll);
+    window.removeEventListener("scroll", this.handleScroll);
     this.prev = false;
   }
 
